@@ -198,7 +198,7 @@ main p, table, h4{
         flex-direction: column;
     }
     .contenedor .cardder, .contenedor .cardizq {
-        width: 350px;
+        width: 250px;
         margin: 2rem auto;
     }
 }
