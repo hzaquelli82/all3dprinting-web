@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Overlock:ital@1&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+h1, h2{
+    text-align: end;
+    font-size: 5rem;
+    color: rgb(16, 30, 231);
+    font-family: Bangers;
+    letter-spacing: 0.5rem;
+}
+h1:hover {
+    animation: texto-animacion 2s ease 0s;
+}
+h2{
+    font-size: 2rem;
+}
+header{
+    background-image: linear-gradient(to right, rgba(26, 25, 46, 0.808), white);
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+footer{
+    background-image: linear-gradient(to left, rgba(26, 25, 46, 0.808), white);
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+nav .nav{
+    background-color: gray;
+    color: mintcream;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+}
+nav .nav:hover{
+    font-size: 1.7rem;
+    padding: 0.7rem;   
+}
+nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+body{
+    background-image: url(../img/printing3d.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}
+form{
+    background-color: rgba(117, 112, 112, 0.733);
+    padding: 3rem;
+    width: 40rem;
+    border-radius: 3rem;
+    margin: auto;
+    font-family: Overlock, serif;
+    font-size: 1.5rem;
+}
+main{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+main h3{
+    font-size: 4rem;
+}
+.contenedor{
+    margin: 2rem;
+}
+.contenedor .cardder{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 2rem 0rem;
+    border: 0.2rem solid rgba(211, 78, 16, 0.562);
+    border-radius: 1rem;
+}
+.contenedor .cardizq{
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    margin: 2rem 0rem;
+    border: 0.2rem solid rgba(32, 211, 16, 0.493);
+    border-radius: 1rem;
+}
+main p, table, h4{
+    font-size: 2rem;
+    font-family: Overlock,  serif;
+    margin: 3rem 0rem;
+}
+.contenedor p{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0rem auto;
+    text-shadow: 0.2rem 0.4rem 0.3rem rgb(100, 100, 100);
+}
+.contenedor img{
+    width: 50%;
+    height: 25%;
+    border-radius: 1rem;
+}
+@keyframes texto-animacion {
+    20% {
+        transform: translateX(-15rem);
+    }
+
+    50% {
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-5rem);
+    }
+}
+@media screen and (max-width:1024px) {
+    .contenedor img {
+        width: 58rem;
+        height: 25rem;
+    }
+    main h3 {
+        font-size: 3.5rem;
+    }
+}
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    h1, h2 {
+        text-align: start;
+    }
+    header {
+        display: grid;
+        grid-template-columns: [x0] 4fr [x1] 1fr [x2];
+        grid-template-rows: [y0] 2fr [y1] 1fr [y2];
+    }
+    h1 {
+        grid-column: x0 / x1;
+    }
+    h2 {
+        grid-row: y1 / y2;
+        grid-column: x0 / x1;
+    }
+    nav {
+        grid-row: y0 / y2;
+        grid-column: x1 / x2;
+    }
+    nav ul {
+        display: table;
+        float: right;
+    }
+    .contenedor {
+        width: 100%;
+        max-width: 768px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+    .contenedor .cardder {
+        display: flex;
+        flex-wrap: wrap;
+        width: 45%;
+        margin: 1rem 1rem;
+        padding: 0.5rem;
+        border: 0.2rem solid rgba(32, 211, 16, 0.493);
+        border-radius: 1rem;
+    }
+    .contenedor .cardizq {
+        display: flex;
+        flex-wrap: wrap;
+        width: 45%;
+        margin: 1rem 1rem;
+        padding: 0.5rem;
+        border: 0.2rem solid rgba(32, 211, 16, 0.493);
+        border-radius: 1rem;
+    }
+    .contenedor img {
+        width: 100%;
+    }
+    .contenedor p {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:460px) {
+    html {
+        font-size: 40%;
+    }
+    nav ul li {
+        margin: 1rem auto;
+    }
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor .cardder, .contenedor .cardizq {
+        width: 350px;
+        margin: 2rem auto;
+    }
+}
